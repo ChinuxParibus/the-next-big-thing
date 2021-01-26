@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+  >
+  <style>
+    body {
+      font-size: 18pt;
+    }
+    .half {
+      width: 50vw;
+      height: 100vh;
+    }
+  </style>
+  <title>Big Thing Coming... 🥑</title>
+</head>
+<body class="is-light">
+  <section class="hero">
+    <div class="hero-body p-0 is-flex">
+      <div class="half px-6 has-background-success has-text-white is-flex is-align-items-center">
+        <div>
+          <h1 class="is-size-1">Hola 👋🏼</h1>
+          <h2 class="is-size-2">
+            Me llamo Jhony y soy<br> 🥑 El aguacate programador 💻
+          </h2>
+          <p>Puedes seleccionar algún elemento de aquel menú 👉🏼</p>
+          <p>...o, podrías divertirte un rato actualizando la página.</p>
+          <div class="box mt-6 has-text-centered" x-data="messages()">
+            <p x-text="selectMessage()"></p>
+          </div>
+        </div>
+      </div>
+      <div class="half px-6 is-flex is-align-items-center">
+        hola
+      </div>
+    </div>
+  </section>
+  <script src="./alpine.min.js"></script>
+  <script>
+    const messages = () => ({
+      msgs: [
+        "Valar Morghulis",
+        "C:\\> ▮",
+        "... 🤔",
+        "#allyourbasearebelongtous",
+        "🥑...?",
+        "#OMG",
+        "ようこそ！",
+        "Ningún pixel fue dañado",
+        "\"The cake is a lie\"",
+        "☕ ¿Café o Chocolate? 🍫",
+        "Compilando portfolio.exe.",
+        "El hoyo ... del conejo 😏",
+        "I read the console, Dan",
+        "keep going, please.",
+        "Always :3",
+        "Have a Nice Day!",
+        " :V ",
+        "sudo rm -rf /",
+        " ;) ",
+        "Este espacio no está patrocinado"
+      ],
+      selectMessage() {
+        const i = Math.floor(Math.random() * this.msgs.length)
+        return this.msgs[i]
+      }
+    })
+  </script>
+</body>
+</html>
